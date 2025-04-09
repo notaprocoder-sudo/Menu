@@ -1,0 +1,155 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    z-index: 1000 !important;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-logo{
+    display: flex;
+    margin-left: 150px;
+    width: fit-content;
+    padding: 0px;
+    align-items: center;
+}
+
+.logo-image{
+    width: 70px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.navbar-name-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0px;
+}
+
+.logo-name{
+    font-family: "Oswald", sans-serif;
+    margin: 0px;
+    font-size: 24px;
+}
+
+.name-blue{
+    color:#0976EF;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    margin:0;
+}
+
+.name-white{
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    margin:0;
+}
+
+.name-secondary{
+    color: #A0A0A0;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    margin:0;
+}
+
+.navbar-links {
+    display: flex;
+    column-gap: 40px;
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    margin-right: 150px;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+.navbar-links a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    transition-duration: 0.2s;
+}
+
+.navbar-links a:hover{
+    color: #0976EF;
+}
+
+.navbar-links .active{
+    color: #0976EF;
+    font-weight: 600;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .navbar-logo{
+        margin-left: 100px;
+    }
+
+    .navbar-name-block{
+        display: none;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        margin-top: 100px;
+        right: 0;
+        left:0;
+        background-color: #000000;
+        width: 100%;
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.3s ease;
+    }
+
+    .navbar-links.open {
+        max-height: 300px; 
+    }
+
+    .navbar-links.open {
+        display: flex; 
+    }
+
+    .navbar-toggle {
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 5%;
+        margin: 10px 10px;
+    }
+
+    .navbar-logo {
+        margin-left: -20px;
+
+    }
+
+    .navbar-links a {
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+    }
+}
