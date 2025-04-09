@@ -13,7 +13,7 @@ const Menu = () => {
     const [itemPrice, setItemPrice] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/get_menu')
+        fetch('https://menu-ihk7.onrender.com/api/get_menu')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch menus');
@@ -32,7 +32,7 @@ const Menu = () => {
 
     const fetchMenuItems = (menuId) => {
         setactivemenu(menuId);
-        fetch(`http://localhost:5000/api/get_menu_items/${menuId}`)
+        fetch(`https://menu-ihk7.onrender.com/api/get_menu_items/${menuId}`)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch menu items');
@@ -55,7 +55,7 @@ const Menu = () => {
     }
 
     const handleModalSubmit = () => {
-        fetch('http://localhost:5000/api/add_menu_category', {
+        fetch('https://menu-ihk7.onrender.com/api/add_menu_category', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const Menu = () => {
     };
 
     const handleItemModalSubmit = () => {
-        fetch('http://localhost:5000/api/add_menu_item', {
+        fetch('https://menu-ihk7.onrender.com/api/add_menu_item', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
