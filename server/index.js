@@ -17,7 +17,8 @@ const corsOptions = {
 
 const PORT = process.env.PORT||5000;
 mongoose
-  .connect("mongodb://127.0.0.1:27017/menu")
+  .connect("mongodb+srv://dipin89433:Su5bQWnqqsCjYEsP@cluster0.wflp5ug.mongodb.net/menu?retryWrites=true&w=majority&appName=Cluster0
+")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
