@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 dotenv.config();
 
 const corsOptions = {
-    origin: 'http://localhost:5173', 
+    origin: 'https://mern-menu-app.netlify.app', 
     methods: ['GET', 'POST'],
     credentials: true,
 };
